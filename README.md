@@ -1,23 +1,23 @@
 # mysql-events
-[![CircleCI](https://circleci.com/gh/rodrigogs/mysql-events.svg)](https://circleci.com/gh/rodrigogs/mysql-events)
-[![Code Climate](https://codeclimate.com/github/rodrigogs/mysql-events/badges/gpa.svg)](https://codeclimate.com/github/rodrigogs/mysql-events)
-[![Test Coverage](https://codeclimate.com/github/rodrigogs/mysql-events/badges/coverage.svg)](https://codeclimate.com/github/rodrigogs/mysql-events/coverage)
+[![CircleCI](https://circleci.com/gh/cenkingunlugu/mysql-events.svg)](https://circleci.com/gh/cenkingunlugu/mysql-events)
+[![Code Climate](https://codeclimate.com/github/cenkingunlugu/mysql-events/badges/gpa.svg)](https://codeclimate.com/github/cenkingunlugu/mysql-events)
+[![Test Coverage](https://codeclimate.com/github/cenkingunlugu/mysql-events/badges/coverage.svg)](https://codeclimate.com/github/cenkingunlugu/mysql-events/coverage)
 
 A [node.js](https://nodejs.org) package that watches a MySQL database and runs callbacks on matched events.
 
-This package is based on the [original ZongJi](https://github.com/nevill/zongji) and the [original mysql-events](https://github.com/spencerlambert/mysql-events) modules. Please make sure that you meet the requirements described at [ZongJi](https://github.com/rodrigogs/zongji#installation), like MySQL binlog etc.
+This package is based on the [original ZongJi](https://github.com/nevill/zongji) and the [original mysql-events](https://github.com/spencerlambert/mysql-events) modules. Please make sure that you meet the requirements described at [ZongJi](https://github.com/cenkingunlugu/zongji#installation), like MySQL binlog etc.
 
 Check [@kuroski](https://github.com/kuroski)'s [mysql-events-ui](https://github.com/kuroski/mysql-events-ui) for a `mysql-events` UI implementation.
 
 ## Install
 ```sh
-npm install @rodrigogs/mysql-events
+npm install @cenkingunlugu/mysql-events
 ```
 
 ## Quick Start
 ```javascript
 const mysql = require('mysql');
-const MySQLEvents = require('@rodrigogs/mysql-events');
+const MySQLEvents = require('@cenkingunlugu/mysql-events');
 
 const program = async () => {
   const connection = mysql.createConnection({
@@ -52,7 +52,7 @@ program()
   .then(() => console.log('Waiting for database events...'))
   .catch(console.error);
 ```
-[Check the examples](https://github.com/rodrigogs/mysql-events/examples)
+[Check the examples](https://github.com/cenkingunlugu/mysql-events/examples)
 
 ## Usage
   ### #constructor(connection, options)
@@ -84,7 +84,7 @@ program()
       startAtEnd: true,
     });
     ```
-    [See more about ZongJi options](https://github.com/rodrigogs/zongji#zongji-class)
+    [See more about ZongJi options](https://github.com/cenkingunlugu/zongji#zongji-class)
 
   ### #start()
   - start function ensures that MySQL is connected and ZongJi is running before resolving its promise
@@ -176,7 +176,7 @@ program()
       ...
     });
     ```
-    [Allowed statements](https://github.com/rodrigogs/mysql-events/blob/master/lib/STATEMENTS.enum.js)
+    [Allowed statements](https://github.com/cenkingunlugu/mysql-events/blob/master/lib/STATEMENTS.enum.js)
   - The `onEvent` argument is a function where the trigger events should be threated
     ```javascript
     instance.addTrigger({
@@ -202,7 +202,7 @@ program()
     instance.on(MySQLEvents.EVENTS.CONNECTION_ERROR, (err) => console.log('Connection error', err));
     instance.on(MySQLEvents.EVENTS.ZONGJI_ERROR, (err) => console.log('ZongJi error', err));
     ```
-  [Available events](https://github.com/rodrigogs/mysql-events/blob/master/lib/EVENTS.enum.js)
+  [Available events](https://github.com/cenkingunlugu/mysql-events/blob/master/lib/EVENTS.enum.js)
 
 ## Tigger event object
 It has the following structure:
@@ -239,4 +239,4 @@ It has the following structure:
 **Make sure the database user has the privilege to read the binlog on database that you want to watch on.**
 
 ## LICENSE
-[BSD-3-Clause](https://github.com/rodrigogs/mysql-events/blob/master/LICENSE) © Rodrigo Gomes da Silva
+[BSD-3-Clause](https://github.com/cenkingunlugu/mysql-events/blob/master/LICENSE) © Rodrigo Gomes da Silva

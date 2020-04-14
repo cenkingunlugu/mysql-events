@@ -1,9 +1,9 @@
 {
-  "name": "@rodrigogs/mysql-events",
+  "name": "@cenkingunlugu/mysql-events",
   "version": "0.6.0",
   "license": "BSD-3-Clause",
   "description": "A node.js package that watches a MySQL database and runs callbacks on matched events like updates on tables and/or specific columns.",
-  "homepage": "https://github.com/rodrigogs/mysql-events",
+  "homepage": "https://github.com/cenkingunlugu/mysql-events",
   "keywords": [
     "mysql",
     "events",
@@ -13,7 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:rodrigogs/mysql-events.git"
+    "url": "git+ssh://git@github.com/cenkingunlugu/mysql-events.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "main": "index.js",
   "scripts": {
@@ -27,7 +30,7 @@
     "coverage": "nyc --reporter=lcov npm test"
   },
   "dependencies": {
-    "@rodrigogs/zongji": "^0.4.14",
+    "zongji": "^0.5.1",
     "debug": "^4.1.1",
     "debuggler": "^1.0.0",
     "mysql": "^2.17.1"
@@ -45,5 +48,13 @@
   },
   "engines": {
     "node": ">=7.6.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/cenkingunlugu/mysql-events/issues"
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "author": "Cenk Ebret"
 }
