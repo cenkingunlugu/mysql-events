@@ -1,6 +1,6 @@
 {
   "name": "@cenkingunlugu/mysql-events",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "license": "BSD-3-Clause",
   "description": "A node.js package that watches a MySQL database and runs callbacks on matched events like updates on tables and/or specific columns.",
   "homepage": "https://github.com/cenkingunlugu/mysql-events",
